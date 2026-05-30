@@ -14,12 +14,13 @@ namespace Songliste
 {
     public partial class AddSong : Form
     {
+        private Form1 _form1;
 
         public class Songs
         {
             public string title { get; set; }
             public string artist { get; set; }
-            public int year { get; set; }
+            public string year { get; set; }
         }
 
         private string GetSongsJsonPath()
@@ -41,9 +42,10 @@ namespace Songliste
             return Path.Combine(Application.StartupPath, "songs.json");
         }
 
-        public AddSong()
+        public AddSong(Form1 form1)
         {
             InitializeComponent();
+            _form1 = form1;
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -82,12 +84,16 @@ namespace Songliste
             {
                 title = txt_Title.Text,
                 artist = txt_artist.Text,
-                year = int.Parse(txt_year.Text)
+                year = txt_year.Text
             });
 
             string newJson = JsonSerializer.Serialize(songs, new JsonSerializerOptions { WriteIndented = true });
 
             File.WriteAllText(filePath, newJson);
+
+            _form1.LoadSongs();
+
+            this.Close();
         }
 
         private void showPath_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
