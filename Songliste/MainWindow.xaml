@@ -112,7 +112,8 @@
         <!-- ═══════════════════════════════════════
              SONG LIST
              ═══════════════════════════════════════ -->
-        <ScrollViewer Grid.Row="2" VerticalScrollBarVisibility="Auto" Focusable="False">
+        <ScrollViewer Grid.Row="2" Style="{StaticResource DarkScrollViewer}"
+                      VerticalScrollBarVisibility="Auto" Focusable="False">
             <ItemsControl x:Name="songsList" Focusable="False">
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
@@ -123,7 +124,7 @@
                                 <SolidColorBrush Color="#1A1A1A"/>
                             </Border.BorderBrush>
                             <Border.Background>
-                                <SolidColorBrush x:Name="rowBg" Color="Transparent"/>
+                                <SolidColorBrush Color="Transparent"/>
                             </Border.Background>
 
                             <Grid x:Name="rowGrid" Height="56" Margin="24,0,16,0">
@@ -148,7 +149,7 @@
                                           Data="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"
                                           Stretch="Uniform">
                                         <Path.Fill>
-                                            <SolidColorBrush x:Name="noteFill" Color="#535353"/>
+                                            <SolidColorBrush Color="#535353"/>
                                         </Path.Fill>
                                     </Path>
                                 </Viewbox>
@@ -185,12 +186,14 @@
                                 <EventTrigger RoutedEvent="MouseEnter">
                                     <BeginStoryboard>
                                         <Storyboard>
-                                            <ColorAnimation Storyboard.TargetName="rowBg"
-                                                            Storyboard.TargetProperty="Color"
-                                                            To="#1E1E1E" Duration="0:0:0.12"/>
-                                            <ColorAnimation Storyboard.TargetName="noteFill"
-                                                            Storyboard.TargetProperty="Color"
-                                                            To="#1DB954" Duration="0:0:0.12"/>
+                                            <ColorAnimation
+                                                Storyboard.TargetName="rowBorder"
+                                                Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                                To="#1E1E1E" Duration="0:0:0.12"/>
+                                            <ColorAnimation
+                                                Storyboard.TargetName="noteIcon"
+                                                Storyboard.TargetProperty="(Path.Fill).(SolidColorBrush.Color)"
+                                                To="#1DB954" Duration="0:0:0.12"/>
                                             <DoubleAnimation Storyboard.TargetName="deleteBtn"
                                                              Storyboard.TargetProperty="Opacity"
                                                              To="1" Duration="0:0:0.15"/>
@@ -200,12 +203,14 @@
                                 <EventTrigger RoutedEvent="MouseLeave">
                                     <BeginStoryboard>
                                         <Storyboard>
-                                            <ColorAnimation Storyboard.TargetName="rowBg"
-                                                            Storyboard.TargetProperty="Color"
-                                                            To="Transparent" Duration="0:0:0.12"/>
-                                            <ColorAnimation Storyboard.TargetName="noteFill"
-                                                            Storyboard.TargetProperty="Color"
-                                                            To="#535353" Duration="0:0:0.12"/>
+                                            <ColorAnimation
+                                                Storyboard.TargetName="rowBorder"
+                                                Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                                To="Transparent" Duration="0:0:0.12"/>
+                                            <ColorAnimation
+                                                Storyboard.TargetName="noteIcon"
+                                                Storyboard.TargetProperty="(Path.Fill).(SolidColorBrush.Color)"
+                                                To="#535353" Duration="0:0:0.12"/>
                                             <DoubleAnimation Storyboard.TargetName="deleteBtn"
                                                              Storyboard.TargetProperty="Opacity"
                                                              To="0" Duration="0:0:0.15"/>

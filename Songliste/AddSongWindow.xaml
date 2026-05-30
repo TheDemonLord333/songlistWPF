@@ -70,10 +70,11 @@
                                         <SolidColorBrush x:Name="closeBg" Color="Transparent"/>
                                     </Border.Background>
                                     <Viewbox Width="14" Height="14">
-                                        <Path Data="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+                                        <Path x:Name="closeIcon"
+                                              Data="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
                                               Stretch="Uniform">
                                             <Path.Fill>
-                                                <SolidColorBrush x:Name="closeColor" Color="#535353"/>
+                                                <SolidColorBrush Color="#535353"/>
                                             </Path.Fill>
                                         </Path>
                                     </Viewbox>
@@ -82,24 +83,28 @@
                                     <EventTrigger RoutedEvent="MouseEnter">
                                         <BeginStoryboard>
                                             <Storyboard>
-                                                <ColorAnimation Storyboard.TargetName="closeColor"
-                                                                Storyboard.TargetProperty="Color"
-                                                                To="#FFFFFF" Duration="0:0:0.1"/>
-                                                <ColorAnimation Storyboard.TargetName="closeBg"
-                                                                Storyboard.TargetProperty="Color"
-                                                                To="#2A2A2A" Duration="0:0:0.1"/>
+                                                <ColorAnimation
+                                                    Storyboard.TargetName="closeIcon"
+                                                    Storyboard.TargetProperty="(Path.Fill).(SolidColorBrush.Color)"
+                                                    To="#FFFFFF" Duration="0:0:0.1"/>
+                                                <ColorAnimation
+                                                    Storyboard.TargetName="closeBorder"
+                                                    Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                                    To="#2A2A2A" Duration="0:0:0.1"/>
                                             </Storyboard>
                                         </BeginStoryboard>
                                     </EventTrigger>
                                     <EventTrigger RoutedEvent="MouseLeave">
                                         <BeginStoryboard>
                                             <Storyboard>
-                                                <ColorAnimation Storyboard.TargetName="closeColor"
-                                                                Storyboard.TargetProperty="Color"
-                                                                To="#535353" Duration="0:0:0.1"/>
-                                                <ColorAnimation Storyboard.TargetName="closeBg"
-                                                                Storyboard.TargetProperty="Color"
-                                                                To="Transparent" Duration="0:0:0.1"/>
+                                                <ColorAnimation
+                                                    Storyboard.TargetName="closeIcon"
+                                                    Storyboard.TargetProperty="(Path.Fill).(SolidColorBrush.Color)"
+                                                    To="#535353" Duration="0:0:0.1"/>
+                                                <ColorAnimation
+                                                    Storyboard.TargetName="closeBorder"
+                                                    Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                                    To="Transparent" Duration="0:0:0.1"/>
                                             </Storyboard>
                                         </BeginStoryboard>
                                     </EventTrigger>
