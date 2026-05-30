@@ -1,52 +1,52 @@
 [
-{
-"title" : "Wannabe"
-"artist" : "Spice Girls"
-"year" : "1996"
-},
-{
-"title" : "GIMME! GIMME! GIMME!"
-"artist" : "ABBA"
-"year" : "1979"
-},
-{
-"title" : "Get Lucky"
-"artist" : "Daft Punk, Pharrell Williams, Nile Rodgers"
-"year" : "2013"
-},
-{
-"title" : "Every Breath You Take"
-"artist" : "The Police"
-"year" : "1983"
-},
-{
-"title" : "Still D.R.E."
-"artist" : "Dr.Dre, Snoop Dogg"
-"year" : "1999"
-},
-{
-"title" : "Highway to Hell"
-"artist" : "AC/DC"
-"year" : "1979"
-},
-{
-"title" : "...Baby One More Time"
-"artist" : "Britney Spears"
-"year" : "1998"
-},
-{
-"title" : "Seven Nation Army"
-"artist" : "The White Stripes"
-"year" : "2003"
-},
-{
-"title" : "Back in Black"
-"artist" : "AC/DC"
-"year" : "1980"
-},
-{
-"title" : "Smells Like Teen Spirit"
-"artist" : "Nirvana"
-"year" : "1991"
-}
+  {
+    "title": "Wannabe",
+    "artist": "Spice Girls",
+    "year": 1996
+  },
+  {
+    "title": "GIMME! GIMME! GIMME!",
+    "artist": "ABBA",
+    "year": 1979
+  },
+  {
+    "title": "Get Lucky",
+    "artist": "Daft Punk, Pharrell Williams, Nile Rodgers",
+    "year": 2013
+  },
+  {
+    "title": "Every Breath You Take",
+    "artist": "The Police",
+    "year": 1983
+  },
+  {
+    "title": "Still D.R.E.",
+    "artist": "Dr.Dre, Snoop Dogg",
+    "year": 1999
+  },
+  {
+    "title": "Highway to Hell",
+    "artist": "AC/DC",
+    "year": 1979
+  },
+  {
+    "title": "...Baby One More Time",
+    "artist": "Britney Spears",
+    "year": 1998
+  },
+  {
+    "title": "Seven Nation Army",
+    "artist": "The White Stripes",
+    "year": 2003
+  },
+  {
+    "title": "Back in Black",
+    "artist": "AC/DC",
+    "year": 1980
+  },
+  {
+    "title": "Smells Like Teen Spirit",
+    "artist": "Nirvana",
+    "year": 1991
+  }
 ]
