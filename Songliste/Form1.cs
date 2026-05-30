@@ -1,4 +1,7 @@
-﻿using System;
+//Form1.cs
+
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -43,7 +46,7 @@ namespace Songliste
         public void LoadSongs()
         {
             //Load Songs from songs.json and display them in the ListBox
-            
+
             lb_Table.Items.Clear();
 
             string filePath = GetSongsJsonPath();
@@ -79,6 +82,17 @@ namespace Songliste
         {
             AddSong addSong = new AddSong(this);
             addSong.Show();
+        }
+
+        private void btnRemove_Click(object sender, EventArgs e)
+        {
+            // Remove selected song from songs.json and update the ListBox
+
+            // Get selected song
+
+            // Compare selected song with songs in songs.json and remove it
+
+            // Update ListBox
         }
     }
 }
